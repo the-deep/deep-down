@@ -22,11 +22,11 @@
             let description = '';
 
             if (currentSite === 'deepl.thedeep.io' || currentSite === 'deepl.togglecorp.com') {
-                mainHeader = "DEEP is down for scheduled maintenance as we're upgrading to an encrypted infrastructure.";
-                description = "This won't impact any data on the platform, but will make it more secure. We anticipate being back online and operating as usual at 08:15 AM GMT. ";
-            } else {
                 mainHeader = "DEEPL temorarily down";
                 description = "DEEPL and assisted tagging features are currently disabled as we are performing infrastructure upgrades.";
+            } else {
+                mainHeader = "DEEP is down for scheduled maintenance as we're upgrading to an encrypted infrastructure.";
+                description = "This won't impact any data on the platform, but will make it more secure. We anticipate being back online and operating as usual at 08:15 AM GMT. ";
             }
             document.getElementById('main-header').innerHTML = mainHeader;
             document.getElementById('description').innerHTML = description;
