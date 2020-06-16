@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel='shortcut icon' href="./static/img/favicon.png" type='image/x-icon' >
+
+    <title>DEEP</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" />
+    <link rel="stylesheet" href="static/css/styles.css" >
+    <!--<script type="text/javascript" src="/static/js/google-analytics.js"></script>-->
+    <script type="text/javascript">
+        window.onload = function() {
+            const currentSite = window.location.host;
+            let mainHeader = '';
+            let description = '';
+
+            if (currentSite === 'deepl.thedeep.io' || currentSite === 'deepl.togglecorp.com') {
+                mainHeader = "DEEP is down for scheduled maintenance as we're upgrading to an encrypted infrastructure.";
+                description = "This won't impact any data on the platform, but will make it more secure. We anticipate being back online and operating as usual at 08:15 AM GMT. ";
+            } else {
+                mainHeader = "DEEPL temorarily down";
+                description = "DEEPL and assisted tagging features are currently disabled as we are performing infrastructure upgrades.";
+            }
+            document.getElementById('main-header').innerHTML = mainHeader;
+            document.getElementById('description').innerHTML = description;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="left-container">
+            <img src="static/img/logo.png" alt="DEEP logo"></img>
+        </div>
+        <div class="right-container">
+            <h1>Welcome to DEEP</h1>
+            <p>built for the people by the people</p>
+        </div>
+    </header>
+    <div class="content">
+        <h1 id="main-header"></h1>
+        <p id="description" class="top-text"></p>
+        <p>
+            If you have any questions in the meantime, please contact
+            <a href="mailto:admin@thedeep.io">admin@thedeep.io</a>.
+        </p>
+    </div>
+    <div class="footer">
+        <p>Join the community!</p>
+        <p>We have active channels on both Slack and Skype.</p>
+        <div class="links">
+            <a href="https://bit.ly/2oCFFab">
+                <img class="join-link" src="static/img/slack.png"></img>
+            </a>
+            <a href="https://join.skype.com/idYxL8ozLDOD">
+                <img class="join-link" src="static/img/skype.png"></img>
+            </a>
+        </div>
+        <div class="zendesk">
+            <p>Need Help?
+                The 
+                <a href="https://deephelp.zendesk.com/hc/en-us/categories/360000874911-DEEP-User-Guide">
+                    Zendesk
+                </a >
+                 helpdesk provides step by step instructions for DEEP.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
