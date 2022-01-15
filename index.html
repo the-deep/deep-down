@@ -15,62 +15,43 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" />
     <link rel="stylesheet" href="static/css/styles.css" >
     <!--<script type="text/javascript" src="/static/js/google-analytics.js"></script>-->
-    <script type="text/javascript">
-        window.onload = function() {
-            const currentSite = window.location.host;
-            let mainHeader = '';
-            let description = '';
-
-            if (currentSite === 'deepl.thedeep.io' || currentSite === 'deepl.togglecorp.com') {
-                mainHeader = "DEEPL temorarily down";
-                description = "DEEPL and assisted tagging features are currently disabled as we are performing infrastructure upgrades.";
-            } else {
-                mainHeader = "DEEP is down for scheduled maintenance as we're upgrading to an encrypted infrastructure.";
-                description = "This won't impact any data on the platform, but will make it more secure. We anticipate being back online and operating as usual at 08:15 AM GMT. ";
-            }
-            document.getElementById('main-header').innerHTML = mainHeader;
-            document.getElementById('description').innerHTML = description;
-        }
-    </script>
 </head>
 <body>
-    <header>
-        <div class="left-container">
-            <img src="static/img/logo.png" alt="DEEP logo"></img>
+    <div class="error-page">
+    <div class="logo-container">
+        <img class="logo" src="static/img/deep-logo-text.svg" alt="DEEP logo"></img>
+    </div>
+    <div class="background">
+        <img
+            src="static/img/water-level.png"
+            class="background-image"
+            alt=""
+        />
+        <img
+            class="kraken"
+            src="static/img/exercise.svg"
+            alt=""
+        />
+        <div class="content">
+            <h2 class="error-message-title">
+                Maintenance
+            </h2>
+            <div class="error-message">
+                DEEP will be down from 15/01/2022 04:15AM GMT to 16/01/2022 12:15PM GMT as we transition to a new version of the platform.
+            </div>
+            <div class="error-message">
+                Want to see what the new platform has in store? Visit here
+                <a target="_blank" class="link" href="https://deephelp.zendesk.com/hc/en-us/articles/4412600779789-DEEP-Release-Plan-Nov-22-2021">here</a>
+                and join our
+                <a class="link" target="_blank" href="https://bit.ly/2oCFFab">Slack</a>
+                and
+                <a class="link" target="_blank" href="https://join.skype.com/idYxL8ozLDOD">Skype</a>
+                groups if you have any questions.
+            </div>
         </div>
-        <div class="right-container">
-            <h1>Welcome to DEEP</h1>
-            <p>built for the people by the people</p>
-        </div>
-    </header>
-    <div class="content">
-        <h1 id="main-header"></h1>
-        <p id="description" class="top-text"></p>
-        <p>
-            If you have any questions in the meantime, please contact
-            <a href="mailto:admin@thedeep.io">admin@thedeep.io</a>.
-        </p>
     </div>
     <div class="footer">
-        <p>Join the community!</p>
-        <p>We have active channels on both Slack and Skype.</p>
-        <div class="links">
-            <a href="https://bit.ly/2oCFFab">
-                <img class="join-link" src="static/img/slack.png"></img>
-            </a>
-            <a href="https://join.skype.com/idYxL8ozLDOD">
-                <img class="join-link" src="static/img/skype.png"></img>
-            </a>
-        </div>
-        <div class="zendesk">
-            <p>Need Help?
-                The 
-                <a href="https://deephelp.zendesk.com/hc/en-us/categories/360000874911-DEEP-User-Guide">
-                    Zendesk
-                </a >
-                 helpdesk provides step by step instructions for DEEP.
-            </p>
-        </div>
+        Copyright @DEEP 2021
     </div>
 </body>
 </html>
